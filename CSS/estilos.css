@@ -1,0 +1,128 @@
+*{
+    background-color: darksalmon;
+    margin: 0px;
+}
+
+/*Index*/
+
+.navIndex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 55, 83);
+    /* position: sticky;
+    top: 0; */
+    height: 8vh;
+}
+
+
+a{
+    padding: 1vh;
+    background-color: transparent;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: xx-large;
+}
+
+#linkFormUno{
+    margin-right: 4vh;
+}
+
+#linkFormDos{
+    margin-left: 4vh;
+}
+
+#linkFormUno:hover, #linkFormDos:hover{
+    color: blueviolet;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(224, 55, 83);
+    /* position: sticky;
+    bottom: 0; */
+    height: 5vh;
+}
+
+h3{
+    padding: 1vh;
+    background-color: transparent;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+}
+
+/*Pagina A*/
+
+.general{
+    display: flex;
+    flex-direction: column;
+    padding: 10vh;
+    border-left: solid 2px rgb(224, 55, 83);
+    border-right: solid 2px rgb(224, 55, 83);
+}
+
+.formUno, .contres{
+    border: solid 2px rgb(224, 55, 83);
+    border-radius: 10px;
+}
+
+h1{
+    color: white;
+    font-family: 'Indie Flower', cursive;
+}
+
+.contres{
+    width: 100%;
+    margin-left: 2vh;
+    margin-right: 3vh;
+}
+
+.contenedorformUno{
+    display: flex;
+    flex-direction: row;
+}
+
+.formUno, h1{
+    margin-left: 3vh;
+}
+
+label, p{
+	color: white;
+	display: block;
+	text-align:start;
+	font-size: 3vh;
+	padding: 0px;
+    margin: 2vh;
+}
+
+input[type="text"], input[type=number]{
+	width: 360px;
+	height: auto;
+	display: block;
+	padding: 1vh;
+	font-weight: bolder;
+	border: 1px solid black;
+    border-radius: 8px;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    background-color: white;
+}
+
+input[type="submit"]{
+    width: 375px;
+	height: auto;
+	display: inline-block;
+	margin: 2vh;
+	cursor: pointer;
+	font-size: 2vh;
+	color: white;
+	padding: 1vh;
+	text-align: center;
+    border-radius: 8px;
+    border: 1px solid blueviolet;
+    background-color: rgb(224, 55, 83);
+}
+
