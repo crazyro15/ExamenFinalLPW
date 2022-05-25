@@ -7,37 +7,48 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <h1>Formulario de operaciones</h1>
+    <div class="general">
 
-    <form action="../Services/operaciones_services.php" method="post" id="formulario">
+        <div class="titulo">
+            <h1>Formulario 2</h1>
+        </div>
+
+        <div class="contenedorformUno">
+
+            <div class="formUno">
+                <form action="../Services/operaciones_services.php" method="post" id="formulario">
+                    <label for="">Nombre del curso</label>
+                    <input type="text" name="curso" placeholder="Ingresar un nombre" required>
+                    <label for="">Cantidad de Materias</label>
+                    <input type="text" id="t1" name="operacion" placeholder="Default Select" list="l1">
+                        <datalist id="l1">
+                            <option>2</option>
+                            <option>4</option>
+                            <option>6</option>
+                            <option>8</option>
+                            <option>10</option>
+                        </datalist>
+                    <label for="">Categoría</label>
+                    <input type="text" id="t2" name="operaciones2" placeholder="Default Select" list="l2" required>
+                        <datalist id="l2">
+                            <option>Lengua y Literatura</option>
+                            <option>Matemáticas</option>
+                            <option>Computación</option>
+                            <option>Ciencias Naturales</option>
+                        </datalist>
+                    <input type="submit" value="Enviar datos" id="btnCalcular">
+                </form>
         
-        <label for="">Nombre del curso</label>
-        <input type="text" name="curso" placeholder="Ingresar un nombre" required>
-        <label for="">Cantidad de Materias</label>
-        <input type="text" id="t1" name="operacion" placeholder="Default Select" list="l1">
-        <datalist id="l1">
-            <option>2</option>
-            <option>4</option>
-            <option>6</option>
-            <option>8</option>
-            <option>10</option>
-        </datalist>
-        <label for="">Categoría</label>
-        <input type="text" id="t2" name="operaciones2" placeholder="Default Select" list="l2" required>
-        <datalist id="l2">
-            <option>Lengua y Literatura</option>
-            <option>Matemáticas</option>
-            <option>Computación</option>
-            <option>Ciencias Naturales</option>
-        </datalist>
-        <input type="submit" value="Enviar datos" id="btnCalcular">
-
-    </form>
-    <p>Curso registrado:</p>
-    <p id="resultadoCurso"></p>
-    <p>Nivel de complejidad del curso:</p>
-    <p id="resultadoComp"></p>
+            </div>
+        
+            <div class="contres">
+                <p>Curso registrado:</p>
+                <p id="resultadoCurso"></p>
+                <p>Nivel de complejidad del curso:</p>
+                <p id="resultadoComp"></p>
+            </div>
+        </div>
+    </div>
 
     <script src="../JS/jquery-3.6.0.min.js" type="text/javascript"></script>
     <script src="../Controllers/Logic_FormDos.js" type="text/javascript"></script>
