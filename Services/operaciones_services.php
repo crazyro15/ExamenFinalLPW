@@ -13,16 +13,6 @@ if($operacion >=2 && $operacion <=4){
     $complejidad = "Nivel avanzado";
 };
 
-// if($operacion == 2 && $operacion ==4){
-//     $complejidad = "Nivel Básico";
-//     }
-// if($operacion == 6 && $operacion <=8){
-//     $complejidad = "Nivel Intermedio";
-// }
-// if($operacion == 10){
-//     $complejidad = "Nivel avanzado";
-// };
-
     $data = array(
         'curso' => $curso,
         'operacion' => $operacion,

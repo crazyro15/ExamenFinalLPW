@@ -1,13 +1,5 @@
 $(document).ready(() => {
 
-    $("#btnHome").click(() => {
-        onVolverHome();
-    });
-
-    $("#btnAnimar").click(() => {
-        $("#formAnimated").animate({left: '250px'});
-    });
-
     $("#formulario").on("submit", () => {
         
         var msgElement = $("#Resultado");
@@ -32,8 +24,8 @@ $(document).ready(() => {
                 btnEnviar.removeAttr("disabled");
                 $("#formulario").trigger("reset");
             },
-            error:() => {
-
+            error: (response) => {
+                console.log("Datos de error__::", response);
             }
             
         });
@@ -41,9 +33,5 @@ $(document).ready(() => {
         return false;
 
     });
-
-    const onVolverHome = () => {
-        window.location.href = "../views/index.html";
-    }
     
 });
