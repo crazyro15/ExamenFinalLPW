@@ -26,7 +26,7 @@ $(document).ready(() => {
             success: (response) => {
                 const datos = JSON.parse(response);
                 console.log(datos);
-                msgElement.html(datos.user.nombre + " " + datos.user.apellido + " " + datos.user.edad);
+                msgElement.html(datos.user.nombre + " " + datos.user.apellido + " " + datos.user.edad + " " + datos.user.mayor);
             },
             complete: () => {
                 btnEnviar.removeAttr("disabled");

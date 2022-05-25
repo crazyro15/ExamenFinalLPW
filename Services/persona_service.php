@@ -8,6 +8,7 @@
         'nombre' => $nombre,
         'apellido' => $apellido,
         'edad' => $edad,
+        'mayor' => $edad > 17 ? "(Es mayor de edad)" : "(Es menor de edad)",
     );
 
     $response = json_encode(array("user" => $data));
