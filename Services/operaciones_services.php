@@ -1,31 +1,36 @@
 <?php
 
-    $valorUno = $_POST['numberUno'];
-    $valorDos = $_POST['numberDos'];
-    $Operacion = $_POST['operaciones'];
-    $resultado = 0;
+$curso = $_POST["curso"];
+$operacion = $_POST["operacion"];
+$operaciones2 = $_POST["operaciones2"];
+$complejidad = "";
 
-    if($Operacion == "Sumar"){
-        $resultado = $valorUno + $valorDos;
-    }
+if($operacion >=2 && $operacion <=4){
+    $complejidad = "Nivel Básico";
+}elseif($operacion >=6 && $operacion <=8){
+    $complejidad = "Nivel Intermedio";
+}elseif($operacion == 10){
+    $complejidad = "Nivel avanzado";
+};
 
-    if($Operacion == "Restar"){
-        $resultado = $valorUno - $valorDos;
-    }
-
-    if($Operacion == "Multiplicar"){
-        $resultado = $valorUno * $valorDos;
-    }
-
-    if($Operacion == "Dividir"){
-        $resultado = $valorUno / $valorDos;
-    }
+// if($operacion == 2 && $operacion ==4){
+//     $complejidad = "Nivel Básico";
+//     }
+// if($operacion == 6 && $operacion <=8){
+//     $complejidad = "Nivel Intermedio";
+// }
+// if($operacion == 10){
+//     $complejidad = "Nivel avanzado";
+// };
 
     $data = array(
-        'resultado' => $resultado,
-        'operacion' => $Operacion
+        'curso' => $curso,
+        'operacion' => $operacion,
+        'operaciones2' => $operaciones2,
+        'complejidad' => $complejidad,
     );
 
+    
     $response = json_encode(array("operacion" => $data));
     echo $response;
 

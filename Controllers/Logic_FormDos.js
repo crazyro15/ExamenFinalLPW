@@ -1,9 +1,11 @@
 $(document).ready(() => {
 
     const urlServer = "../Services/operaciones_services.php";
-    const methodServer = "POST";
+    const methodServer = "post";
 
     $("#formulario").on("submit", () => {
+
+        var btnCalcular = $("#btnCalcular");
 
         $.ajax({
 
@@ -12,8 +14,15 @@ $(document).ready(() => {
             data: $("#formulario").serialize(),
             success: (respuesta) => {
                 const data = JSON.parse(respuesta);
-                $("#resultado").html("La operacion realizada es: " + data.operacion.operacion + " y el resultado es: " +  data.operacion.resultado);
+                $("#resultadoCurso").html(data.operacion.curso);
+                $("#resultadoComp").html(data.operacion.complejidad);
             },
+
+            complete: () => {
+                btnCalcular.removeAttr("disabled");
+                $("#formulario").trigger("reset");
+            },
+
             error: (response) => {
                 console.log("Datos de error__::", response);
             }
